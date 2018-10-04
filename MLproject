@@ -6,4 +6,4 @@ entry_points:
       train_data: {type: string, default: "train.csv"}
       test_data: {type: string, default: "test.csv"}
       epochs: {type: int, default: 32}
-    command: "Rscript -e \"mlflow::mlflow_source('train.R')\" --args --train-data {train} --test-data {test} --epochs {epochs}"
+    command: "Rscript -e \"mlflow::mlflow_source('train.R')\" --args --train-data {train_data} --test-data {test_data} --epochs {epochs}"
