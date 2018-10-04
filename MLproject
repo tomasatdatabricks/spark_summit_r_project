@@ -3,7 +3,7 @@ name: airbnb-keras-regression
 entry_points:
   main:
     parameters:
-      train: {type: string, default: "train.csv"}
-      test: {type: string, default: "test.csv"}
+      train_data: {type: string, default: "train.csv"}
+      test_data: {type: string, default: "test.csv"}
       epochs: {type: int, default: 32}
-    command: "Rscript -e \"mlflow::mlflow_source('train.R')\" --args --train {train} --test {test} --epochs {epochs}"
+    command: "Rscript -e \"mlflow::mlflow_source('train.R')\" --args --train-data {train} --test-data {test} --epochs {epochs}"
